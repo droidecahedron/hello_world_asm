@@ -21,7 +21,7 @@ int main(void)
 	__asm__("mov r0, #0"); // zero out the register
 	// printf("register zero value: %d\n", r0); // !!! THIS WILL CLOBBER r0.
 	__asm__("add r0, r0, #7 ;");	/* register 0 = register 0 + 7 */
-	__asm__("mov %0, r0" : "=r"(r0)); // for printing pruposes in C.
+	__asm__("mov %0, r0" : "=r"(r0)); // for printing purposes in C.
 	printf("\tadded 7 to register 0, stored in register zero.\n\tresult (r0 value): %d\n", r0);
 
 	//external .s file portion
